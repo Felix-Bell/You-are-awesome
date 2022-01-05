@@ -9,18 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var imageview: UIImageView!
     var ersterclick: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("👍🏻 viewDidload has run!")
         messageLabel.text = "no skam"
+        imageview.image = UIImage(named: "image0")
         ersterclick = true
     }
 
     @IBAction func massageButtenPress(_ sender: UIButton) {
         if ersterclick {
-            print("😎hi🤩")
             messageLabel.text = "klick again"
             ersterclick = false
         } else {
